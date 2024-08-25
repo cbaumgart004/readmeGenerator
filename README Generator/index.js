@@ -70,23 +70,28 @@
             },
             {
                 type: 'input',
-                name: 'Description',
+                name: 'description',
                 message: 'Enter the description of your project'
             },
             {
                 type: 'input',
-                name: 'Installation',
+                name: 'installation',
                 message: 'What are the steps to install your project?'
             },
             {
                 type: 'input',
-                name: 'Usage',
+                name: 'usage',
                 message: 'Provide instructions and examples for use. Include screenshots as needed.'
             },
             {
                 type: 'input',
                 name: 'Credits',
                 message: 'Include Credits for your project'
+            },
+            {
+                type: 'input',
+                name: 'authorName',
+                message: 'Enter your Author name'
             },
             {
                 type: 'input',

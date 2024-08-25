@@ -1,6 +1,6 @@
 # title
   ## Description
-  undefined
+  desci
 
   ## Table of Contents
 - [Installation](#installation)
@@ -9,18 +9,17 @@
 - [License](#license)
 
 ##Installation
-  undefined
+  adsflkj
 
 ## Usage
-undefined
+adf
 
 ## Credits
-Authored by [Chris Baumgart](https://github.com/cbaumgart004)
+Authored by [Chfis](https://github.com/adfkjl)
 Contributors:
-- [josiah](https://github.com/jocephuss)
-- [ash](https://github.com/ashcorse)
+- [data](https://github.com/adfjl)
 Third Party Resources:
   
 
-  ## License
-  undefined
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
