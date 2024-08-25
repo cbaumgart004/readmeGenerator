@@ -46,6 +46,7 @@ function renderLicenseLink(licenseLink) {
 function renderLicenseSection(license, licenseLink) {
   
   if (license) {
+    console.log(licenseLink);
    return`## License\n${renderLicenseBadge(license)} ${renderLicenseLink(licenseLink)} `; 
   
 } else{

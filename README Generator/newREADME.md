@@ -1,6 +1,7 @@
-# title
+
+  # title
   ## Description
-  desci
+  description
 
   ## Table of Contents
 - [Installation](#installation)
@@ -8,18 +9,19 @@
 - [Credits](#credits)
 - [License](#license)
 
-##Installation
-  adsflkj
+## Installation
+  install
 
 ## Usage
-adf
+ use
 
 ## Credits
-Authored by [Chfis](https://github.com/adfkjl)
+Authored by [chris](https://github.com/cbaumg)
 Contributors:
-- [data](https://github.com/adfjl)
+
+
 Third Party Resources:
   
 
 ## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [License](url)  [License](url)

@@ -112,7 +112,7 @@
             },
             {
                 type: 'input',
-                name: 'licenseUrl',
+                name: 'licenseLink',
                 message: 'Enter the URL of your license'
             }
         ]).then(answers => {
