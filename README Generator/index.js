@@ -1,36 +1,15 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
     const inquirer = require('inquirer');
     const fs = require('fs');
     const generateMarkdown = require('./utils/generateMarkdown');
     //Add a list of licenses to choose from inquirer
-    const licenseOptions = [
-        {
-            name: 'MIT License',
-            value: 'MIT',
-            badge: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-        },
-        {
-            name: 'Apache License 2.0',
-            value: 'Apache-2.0',
-            badge: '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-        },
-        {
-            name: 'GPL-3.0',
-            value: 'GPL-3.0',
-            badge: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)'
-        },
-        {
-          name: 'BSD-3-Clause',
-            value: 'BSD-3-Clause',
-            badge: '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
-        }
-        // Add more license options with corresponding badges as needed
-      ];
+    
+    const licenseOptions = ['MIT', 'Apache-2.0', 'GPL-3.0', 'BSD-3-Clause'];
 
-    // TODO: Create an array of questions for user input
+    //  Create an array of questions for user input
     const questions = () => {
         const collaborators = [];
-    
+    //Create an array for collaborators
         const promptCollaborators = () => {
             return inquirer.prompt([
                 {
@@ -61,7 +40,7 @@
                 });
             });
         };
-    
+        //Project prompts here
         return inquirer.prompt([
             {
                 type: 'input',
@@ -85,8 +64,8 @@
             },
             {
                 type: 'input',
-                name: 'Credits',
-                message: 'Include Credits for your project'
+                name: 'credits',
+                message: 'Include Credits for your project (contributors are added at the end)'
             },
             {
                 type: 'input',
@@ -105,6 +84,17 @@
                 default: false
             },
             {
+                type: 'input',
+                name: 'addResourceName',
+                message: 'Please enter the names of any third-party resources your project uses (e.g., APIs, libraries, etc)',
+                
+            },
+                {
+                type: 'input',
+                name: 'addResources',
+                message: 'Please enter the URLs of any third-party resources your project uses (e.g., APIs, libraries)'
+                },
+            {
                 type: 'list',
                 name: 'license',
                 message: 'Choose a license for your application:',
@@ -115,9 +105,11 @@
                 name: 'licenseLink',
                 message: 'Enter the URL of your license'
             }
+            //if there are any collaborators, return them here
         ]).then(answers => {
             if (answers.addCollaborators) {
                 return promptCollaborators().then(newCollaborators => {
+                    // Update the answers with the new collaborators and project responses
                     const newReadMe = generateMarkdown({ ...answers, collaborators: newCollaborators });
                     writeToFile('newREADME.md', newReadMe);
                     console.log('New README file generated successfully!');

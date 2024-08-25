@@ -1,5 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+//match the license to the corresponding badge
 function renderLicenseBadge(license) {
 const licenseOptions = [
   {
@@ -31,7 +32,7 @@ const selectedLicense = licenseOptions.find(option => option.value === license);
     return '';
   };
 };
-// TODO: Create a function that returns the license link
+// Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(licenseLink) {
   if (licenseLink) {
@@ -41,12 +42,12 @@ function renderLicenseLink(licenseLink) {
   };
 }
   
-// TODO: Create a function that returns the license section of README
+//  Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license, licenseLink) {
   
   if (license) {
-    console.log(licenseLink);
+    
    return`## License\n${renderLicenseBadge(license)} ${renderLicenseLink(licenseLink)} `; 
   
 } else{
@@ -54,7 +55,8 @@ function renderLicenseSection(license, licenseLink) {
 }
 };
 
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
+//make sure to include all collaborators in the array using the map function
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.licenseLink);
@@ -77,12 +79,15 @@ function generateMarkdown(data) {
 ${data.usage}
 
 ## Credits
+${data.credits}
+
 Authored by [${data.authorName}](https://github.com/${data.username})
+
 Contributors:
 ${data.collaborators.map(collaborators => `- [${collaborators.name}](https://github.com/${collaborators.username})`).join('\n')}
 
 Third Party Resources:
-  
+ [${data.addResourceName}](${data.addResources})
 
 ${licenseSection}
 `;
